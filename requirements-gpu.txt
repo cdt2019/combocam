@@ -1,0 +1,7 @@
+# 运行依赖（NVIDIA GPU 推理）。onnxruntime-gpu 1.18 需要 CUDA 11.8 + cuDNN 8；CUDA 12 环境换成 onnxruntime-gpu>=1.19。
+numpy==1.26.4
+scipy==1.13.1
+opencv-python-headless==4.10.0.84
+onnxruntime-gpu==1.18.0
+# 可选：启动时给模型接上 GPU 上做的输入转换、输出筛选（combocam/onnx_io.py）；没装就退回 CPU 预处理，结果相同
+onnx==1.16.2

@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "combocam"
+version = "0.1.0"
+description = "Count football juggling, jump rope and basketball dribbling from phone videos, and render effects videos."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+keywords = ["computer-vision", "sports", "pose-estimation", "object-detection", "video-effects", "onnx"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Multimedia :: Video",
+  "Topic :: Scientific/Engineering :: Image Recognition",
+]
+dependencies = [
+  "numpy>=1.24,<2",
+  "scipy>=1.10",
+  "opencv-python-headless>=4.8",
+]
+
+[project.urls]
+Homepage = "https://github.com/cdt2019/combocam"
+Documentation = "https://github.com/cdt2019/combocam/tree/main/docs"
+Issues = "https://github.com/cdt2019/combocam/issues"
+
+[project.optional-dependencies]
+# 二选一：CPU 推理或 NVIDIA GPU 推理（两个包不能同时装）
+cpu = ["onnxruntime>=1.18"]
+gpu = ["onnxruntime-gpu>=1.18", "onnx>=1.16"]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[project.scripts]
+combocam = "combocam.cli:main"
+
+[tool.setuptools]
+packages = ["combocam"]
+
+[tool.ruff]
+line-length = 160
+target-version = "py310"
+extend-exclude = ["out", "samples", "models", "fonts", "render/node_modules"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,14 @@
+{
+  "name": "combocam-render",
+  "version": "0.1.0",
+  "private": true,
+  "description": "ComboCam 的成片渲染：原视频 + 轨迹 JSON → 带特效的竖版视频",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "^0.1.65"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "_comment": "风格定义：配色（按连击数分档的 levels）、各风格的拖尾和粒子、里程碑间隔。实时预览和服务端成片可以共用这一份。",
+  "levels": [
+    { "from": 0, "head": "#5EF0FF", "tail": "#0A6CFF", "glow": "#22E3FF", "num": "#5EF0FF" },
+    { "from": 10, "head": "#D9A8FF", "tail": "#7C3AED", "glow": "#B57BFF", "num": "#D9A8FF" },
+    { "from": 20, "head": "#FFC977", "tail": "#FF5A1F", "glow": "#FF8A1F", "num": "#FFC977" },
+    { "from": 30, "head": "#FFF0A0", "tail": "#FFB300", "glow": "#FFD447", "num": "#FFE27A" }
+  ],
+  "styles": {
+    "neon": { "name": "霓虹", "colors": null, "trail": { "width": 1.05, "dur": 0.36, "thin": false }, "particles": null, "tag": false },
+    "flame": { "name": "烈焰", "colors": { "head": "#FFF1A8", "tail": "#FF3B1F", "glow": "#FF6A1F", "num": "#FFB547" }, "trail": { "width": 1.2, "dur": 0.34, "thin": false }, "particles": "flame", "tag": false },
+    "comet": { "name": "彗星", "colors": { "head": "#FFFFFF", "tail": "#FFC24A", "glow": "#FFE7A3", "num": "#FFFFFF" }, "trail": { "width": 0.85, "dur": 0.55, "thin": false }, "particles": "comet", "tag": false },
+    "broadcast": { "name": "赛事", "colors": { "head": "#8AF5FF", "tail": "#22E3FF", "glow": "#22E3FF", "num": "#FFFFFF" }, "trail": { "width": 0.1, "dur": 0.95, "thin": true }, "particles": null, "tag": true },
+    "replay": { "name": "回放", "colors": { "head": "#D4FF3A", "tail": "#FFFFFF", "glow": "#D4FF3A", "num": "#D4FF3A" }, "trail": { "width": 0.55, "dur": 0.36, "thin": false }, "particles": null, "tag": true }
+  },
+  "milestones": { "every": 10, "until": 50, "thenEvery": 50 },
+  "accent": "#D4FF3A",
+  "jumprope": { "milestones": { "every": 10, "until": 30, "thenEvery": 50 },
+    "pk": { "left": { "name": "红方", "color": "#FF4D6A" }, "right": { "name": "蓝方", "color": "#3DA9FF" } } }
+}

@@ -1,0 +1,7 @@
+# 文本统一用 LF（Windows、Linux、macOS 上的 diff 和 MD5 核对都一致）
+* text=auto eol=lf
+
+*.gif binary
+*.png binary
+*.mp4 binary
+*.onnx binary

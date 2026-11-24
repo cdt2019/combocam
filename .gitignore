@@ -1,0 +1,25 @@
+# Python
+.venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Node
+render/node_modules/
+render/native/*.node
+render/native/build/
+
+# 下载的模型、字体（python tools/fetch_assets.py）
+models/*.onnx
+fonts/*.ttf
+fonts/*.otf
+fonts/OFL-*.txt
+
+# 测试视频（python tools/fetch_samples.py 下载，Pexels 许可不允许再分发）；标注 JSON 入库
+samples/**/*.mp4
+samples/**/*.mov
+
+# 输出、缓存
+out/
+bench_out/

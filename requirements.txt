@@ -1,0 +1,5 @@
+# 运行依赖（CPU 版推理）。有 NVIDIA 显卡用 requirements-gpu.txt，见 docs/install.md。
+numpy==1.26.4
+scipy==1.13.1
+opencv-python-headless==4.10.0.84
+onnxruntime==1.18.0
