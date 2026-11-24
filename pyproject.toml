@@ -31,7 +31,7 @@ Issues = "https://github.com/cdt2019/combocam/issues"
 # 二选一：CPU 推理或 NVIDIA GPU 推理（两个包不能同时装）
 cpu = ["onnxruntime>=1.18"]
 gpu = ["onnxruntime-gpu>=1.18", "onnx>=1.16"]
-dev = ["pytest>=8", "ruff>=0.6"]
+dev = ["pytest>=8", "ruff==0.14.10"]
 
 [project.scripts]
 combocam = "combocam.cli:main"
@@ -43,6 +43,10 @@ packages = ["combocam"]
 line-length = 160
 target-version = "py310"
 extend-exclude = ["out", "samples", "models", "fonts", "render/node_modules"]
+
+[tool.ruff.lint]
+# 写明规则，不随 ruff 版本的默认值变化
+select = ["E4", "E7", "E9", "F"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
